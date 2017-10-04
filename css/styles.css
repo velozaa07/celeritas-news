@@ -1,0 +1,250 @@
+body, html{
+  margin:0;
+  padding:0 1%;
+  height: 100%;
+  font-family: Trebuchet MS, sans-serif;
+  background: url("../img/nik-shuliahin-359344.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/*Global*/
+
+
+li{
+  list-style: none;
+  display: inline-block;;
+}
+
+/*Site*/
+.site{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto 1fr 2fr auto;
+  grid-template-areas:
+  "navb navb navb navb"
+  "main main main sidebar"
+  "posts posts posts sidebar"
+  "footer footer footer footer";
+  grid-row-gap: 20px;
+  grid-column-gap: 15px;
+}
+
+.masthead{
+  grid-area: navb;
+  background-color: #444444;
+  color:white;
+}
+
+.masthead h1{
+  display: inline-block;
+}
+.masthead nav{
+    display: inline-block;
+    float:right;
+}
+
+.current-news{
+  background-color: #3d6099;
+  color: #fcfcfc;
+  font-weight: 800;
+  margin:0;
+}
+.main-content{
+  grid-area: main;
+
+
+}
+
+.post-display{
+  grid-area: posts;
+
+}
+
+.sidebar{
+  grid-area: sidebar;
+
+}
+
+.footer{
+  grid-area: footer;
+  background-color: #3d6099;
+}
+
+/*masthead*/
+.masthead{
+  font-size: 17px;
+}
+
+.masthead h1{
+  font-size: 45px;
+  margin:0;
+  padding:0 20px;
+}
+
+.masthead nav{
+  margin-top: 10px;
+}
+
+.masthead li{
+  margin-right: 15px;
+}
+
+/*current-news*/
+.current-news{
+  padding:10px 15px;
+  height: 1%; /*temp*/
+}
+
+
+/*main-content*/
+.main-content{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas:
+  "main main"
+  "sub sub";
+
+  min-height: 500px;
+}
+
+.main-image{
+  grid-area: main;
+  background: url("../img/augmented-reality-lg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#main-photo-2, #main-photo-3, #main-photo-4{
+  display:none;
+}
+
+#main-photo-2{
+  background: url("../img/mark-zuckerberg-lg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#main-photo-3{
+  background: url("../img/iphone-8-lg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#main-photo-4{
+  background: url("../img/san-francisco-lg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.main-image .description{
+  float: right;
+  width:25%;
+  height: 100%;
+  background: rgba(68,68,68,.8);
+  color:#fcfcfc;
+  text-align: left;
+  padding: 0 2.5%;
+}
+
+.main-image .description h3{
+  margin-top: 15%;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.main-image .description p{
+  font-size: 17px;
+}
+
+.gallery-options{
+  grid-area: sub;
+  text-align: center;
+  background: rgba(0,0,0,.25);
+}
+
+.thumbnail-image{
+  display: inline-block;
+  margin-top: 10px;
+  padding:0 1%;
+}
+
+.thumbnail-image img{
+  margin-top:3%;
+  height: 110px;
+}
+
+/*post-display*/
+.post-display{
+  padding:5px 20px 15px 20px;
+  background: rgba(0,0,0,.25);
+}
+
+.post-display h2{
+  font-size: 30px;
+  font-weight: 800;
+  color: #f7f7f7;
+}
+
+.post-display article{
+  float:left;
+  width:95%;
+  background-color: rgba(255,255,255, 0.85);
+  color: #444444;
+  margin:15px 0;
+  padding:15px 10px;
+}
+
+.post-display article img{
+  float: left;
+  display: inline-block;
+  width:30%;
+  margin-right: 15px;
+}
+
+.post-display article h3{
+  color: #2a446d;
+}
+
+.post-display article p{
+
+}
+
+/* sidebar */
+.sidebar{
+  padding:15px 20px;
+  font-size: 17px;
+  color: #fcfcfc;
+  background: rgba(0,0,0,.25)
+}
+
+.sidebar .post{
+  background-color: #3d6099;
+}
+
+.sidebar h3{
+  font-size: 25px;
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: 40px;
+  padding: 0 10px 5px 10px;
+  color: #f7f7f7;
+}
+
+.sidebar img{
+  width: 100%;
+}
+
+
+
+/*footer*/
+.footer{
+  padding:15px 20px;
+  color: #f7f7f7;
+}
